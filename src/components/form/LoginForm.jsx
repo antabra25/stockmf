@@ -23,7 +23,7 @@ const LoginForm = () => {
 
     return (
 
-        <Stack direction="column" spacing={1} maxWidth={330}>
+        <Stack direction="column" spacing={1} width={250}>
             <Form onSubmit={formik.handleSubmit}>
                 <Stack spacing={2}>
                     <TextField id="email" name="email" value={formik.values.email} onChange={formik.handleChange}
