@@ -6,6 +6,10 @@ import SideBar from "./SideBar.jsx";
 const Layout = () => {
     return (
         <>
+            <NavBar/>
+            <SideBar/>
+            <Content/>
+            <Footer/>
         </>
     )
 

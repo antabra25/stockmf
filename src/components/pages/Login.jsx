@@ -16,10 +16,8 @@ const Login = () => {
                 }}/>
                 <Stack direction="column" justifyContent="center" alignItems="center" width="30%">
 
-                    <Typography component="h1" variant="h3" textAlign="center" color="#6c63ff" fontWeight="bold" marginBottom={4}>Sistema
+                    <Typography component="h1" variant="h3" textAlign="center" color="primary" fontWeight="bold" marginBottom={4}>Sistema
                         de Solicitudes </Typography>
-
-
 
                     <LoginForm/>
                     <Social/>
