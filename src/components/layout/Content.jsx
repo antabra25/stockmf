@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom"
+import {Routes,Route} from "react-router-dom"
 import {Box} from "@mui/material"
 import AddRequest from "../pages/AddRequest.jsx";
 import AddItem from "../pages/AddItem.jsx";
@@ -10,6 +10,8 @@ import Requests from "../pages/Requests"
 import Items from "../pages/Items.jsx";
 import Users from "../pages/Users"
 import Deposits from "../pages/Deposits.jsx";
+import Home from "../pages/Home.jsx"
+import Login from "../pages/Login.jsx";
 
 
 const Content = () => {
@@ -18,6 +20,8 @@ const Content = () => {
             <Box component="main" className="main">
 
                 <Routes>
+                    <Route path="/" element={<Login/>}/>
+                    <Route path="/home" element={<Home/>}/>
                     <Route path="/items/" element={<Items/>}/>
                     <Route path="/items/:id" element={<Items/>}/>
                     <Route path="/add-item/" element={<AddItem/>}/>
@@ -25,7 +29,7 @@ const Content = () => {
                     <Route path="/users/" element={<Users/>}/>
                     <Route path="/users/:id" element={<UserDetails/>}/>
                     <Route path="/edit-user/:id" element={<AddUser/>}/>
-                    <Routes path="/requests/" element={<Requests/>}/>
+                    <Route path="/requests/" element={<Requests/>}/>
                     <Route path="/requests/:userId" element={<UserRequests/>}/>
                     <Route path="/add-requests/" element={<AddRequest/>}/>
                     <Route path="/add-depot" element={<AddDepot/>}/>
