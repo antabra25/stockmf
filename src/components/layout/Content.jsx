@@ -1,5 +1,5 @@
-import {Routes,Route} from "react-router-dom"
-import {Box} from "@mui/material"
+import {Routes, Route, useLocation} from "react-router-dom"
+import {Box, useTheme} from "@mui/material"
 import AddRequest from "../pages/AddRequest.jsx";
 import AddItem from "../pages/AddItem.jsx";
 import AddUser from "../pages/AddUser.jsx";
@@ -12,13 +12,21 @@ import Users from "../pages/Users"
 import Deposits from "../pages/Deposits.jsx";
 import Home from "../pages/Home.jsx"
 import Login from "../pages/Login.jsx";
+import TopBar from "./TopBar.jsx";
+import {tokens} from "../../theme/theme.js";
+
 
 
 const Content = () => {
+
+
+    const location = useLocation()
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
     return (
         <>
-            <Box component="main" className="main">
-
+            <Box component="main" className="content" bgcolor={colors.primary[400]} >
+                {location.pathname !== "/" && <TopBar/>}
                 <Routes>
                     <Route path="/" element={<Login/>}/>
                     <Route path="/home" element={<Home/>}/>
@@ -27,6 +35,7 @@ const Content = () => {
                     <Route path="/add-item/" element={<AddItem/>}/>
                     <Route path="/edit-item/:id" element={<AddItem/>}/>
                     <Route path="/users/" element={<Users/>}/>
+                    <Route path="/add-user/" element={<AddUser/>}/>
                     <Route path="/users/:id" element={<UserDetails/>}/>
                     <Route path="/edit-user/:id" element={<AddUser/>}/>
                     <Route path="/requests/" element={<Requests/>}/>

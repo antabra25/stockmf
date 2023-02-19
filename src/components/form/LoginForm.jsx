@@ -28,7 +28,7 @@ const LoginForm = () => {
                 <Stack spacing={2}>
                     <TextField id="email" name="email" value={formik.values.email} onChange={formik.handleChange}
                                onBlur={formik.handleBlur} error={formik.touched.email && Boolean(formik.errors.email)}
-                               helperText={formik.touched.email && formik.errors.email} type="email"/>
+                               helperText={formik.touched.email && formik.errors.email} type="email" color={"secondary"}/>
                     <TextField id="password" name="password" value={formik.values.password}
                                onChange={formik.handleChange}
                                onBlur={formik.handleBlur} error={formik.touched.password && Boolean(formik.errors.email)}

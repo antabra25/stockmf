@@ -4,7 +4,7 @@ import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
 import Header from "../../components/Header";
 
-const UserTable = () => {
+const RequestTable = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const columns = [
@@ -80,4 +80,4 @@ const UserTable = () => {
     );
 };
 
-export default UserTable;
+export default RequestTable;
